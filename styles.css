@@ -42,3 +42,34 @@
 .menu a:hover {
   background-color: rgba(255,255,255,.3);
 }
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.about {
+  margin: 2em;
+  position: relative;
+}
+
+.integrantes {
+  margin-top: 2em;
+}
+
+.integrantes ul {
+  padding-left: 0;
+}
+
+.integrantes li {
+  list-style-type: none;
+}
+
+#photo-members {
+  float: left;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 10px 30px 20px 0;
+}
