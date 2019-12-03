@@ -2,13 +2,27 @@
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
 
-*{
+* {
   box-sizing: border-box; /* Size take into account border, paddging... */
   color: #777;
   font-family: Raleway;
 }
 
-.cabecera{
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0 2em;
+}
+
+.header-container {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+
+.header{
   background-image: url("imgs/background.jpeg");
   background-color: rgba(128,128,128,0.7);
   background-blend-mode: multiply;  
@@ -18,20 +32,20 @@
   margin: auto;
 }
 
-.nombre-banda{
-  float: right;
-  margin-right: 35px;
+.band-name{
   display: block;
 }
 
 .menu {
   font-size: 24px;
-  float: left;
+}
+
+.menu ul {
+  padding-left: 0;
 }
 
 .menu li {
   display: inline-block;
-  margin-left: 15px;
 }
 
 .menu a {
@@ -41,12 +55,6 @@
 
 .menu a:hover {
   background-color: rgba(255,255,255,.3);
-}
-
-.contenedor {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2em;
 }
 
 .about {
@@ -62,7 +70,7 @@
   padding-left: 0;
 }
 
-.integrantes li {
+li {
   list-style-type: none;
 }
 
@@ -72,4 +80,37 @@
   width: 200px;
   height: 200px;
   margin: 10px 30px 20px 0;
+}
+
+.footer {
+  background: linear-gradient(to left, #822322, #620b06cf);
+  padding: 0.25em 1em;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-container ul {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.footer-links li {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.footer-links img {
+  height: 25px;
+  width: 25px;
+}
+
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: .59em;
+  cursor: pointer;
 }

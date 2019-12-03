@@ -5,107 +5,115 @@
   <meta description="X-Land Tienda"/>
   <meta author="diegof95"/>
   <title>X-Land | Store</title>
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
-  <header id="header" class="header contenedor">
-    <nav id="menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="index.html#conciertos">Conciertos</a></li>
-        <li><a href="#">Tienda</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <h1>Música</h1>
-    <section>
-      <h2>Sencillos y EP</h2>
-      <div>
-        <h3>Intimidad</h3>
-        <img src="imgs/music/intimidad.jpeg" alt="Intimidad portada">
-        <div>
-          <span>$9500</span>
-          <button>Agregar al Carrito</button>
-        </div>
-      </div>
-      <div>
-        <h3>Life Cycle</h3>
-        <img src="imgs/music/life_cycle.jpeg" alt="Life Cycle portada">
-        <div>
-          <span>$9500</span>
-          <button>Agregar al Carrito</button>
-        </div>
-      </div>
-    </section>
-  </section>
-  <section>
-    <h2>Mercancia</h2>
-    <section>
-      <div>
-        <h3>X-Land dije</h3>
-        <img src="imgs/merch/xland_dije.png" alt="X-Land logo dije">
-        <div>
-          <span>$5000</span>
-          <button>Agregar al Carrito</button>
-        </div>
-      </div>
-    </section>
-  </section>
-  <section>
-    <h3>Carrito de Compras</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Ítem</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-        </tr>
-        <tbody>
-          <tr>
-            <td>X-Land dije</td>
-            <td>$5000</td>
-            <td><input type="number" name="agregar_cantidad" value="1" min="0"></td>
-            <td><button>Agregar al Carrito</button></td>
-          </tr>
-          <tr>
-            <td>Intimidad</td>
-            <td>$9500</td>
-            <td><input type="number" name="agregar_cantidad" value="1" min="0"></td>
-            <td><button>Agregar al Carrito</button></td>
-          </tr>
-        </tbody>
-      </thead>
-    </table>
-    <div>
-      <strong>Total</strong>
-      <span>$14500</span>
+  <header id="header" class="header">
+    <div class="container header-container">
+      <nav id="menu" class="menu">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="index.html#conciertos">Conciertos</a></li>
+          <li><a href="store.html">Tienda</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <h1 class="band-name">X-Land</h1>
     </div>
-  </section>
-  <footer>
-    <h3>X-Land</h3>
-    <ul>
-      <li>
-        <a href="https://open.spotify.com/artist/2c8LSSe0oWnJxf54OQpT1S">
-          <img src="imgs/icons/spotify.png" alt="Spotify">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/XLANDBAND/">
-          <img src="imgs/icons/facebook.png" alt="Facebook">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/xlandband/">
-          <img src="imgs/icons/instagram.png" alt="Instagram">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/watch?v=LP0UsELUu_g">
-          <img src="imgs/icons/youtube.png" alt="Youtube">
-        </a>
-      </li>
-    </ul>
+  </header>
+  <div class="container">
+    <section>
+      <h1>Música</h1>
+      <section>
+        <h2>Sencillos y EP</h2>
+        <div>
+          <h3>Intimidad</h3>
+          <img src="imgs/music/intimidad.jpeg" alt="Intimidad portada">
+          <div>
+            <span>$9500</span>
+            <button class="btn">Agregar al Carrito</button>
+          </div>
+        </div>
+        <div>
+          <h3>Life Cycle</h3>
+          <img src="imgs/music/life_cycle.jpeg" alt="Life Cycle portada">
+          <div>
+            <span>$9500</span>
+            <button class="btn">Agregar al Carrito</button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section>
+      <h2>Mercancia</h2>
+      <section>
+        <div>
+          <h3>X-Land dije</h3>
+          <img src="imgs/merch/xland_dije.png" alt="X-Land logo dije">
+          <div>
+            <span>$5000</span>
+            <button class="btn">Agregar al Carrito</button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section>
+      <h3>Carrito de Compras</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Ítem</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+          </tr>
+          <tbody>
+            <tr>
+              <td>X-Land dije</td>
+              <td>$5000</td>
+              <td><input type="number" name="agregar_cantidad" value="1" min="0"></td>
+              <td><button class="btn">Agregar al Carrito</button></td>
+            </tr>
+            <tr>
+              <td>Intimidad</td>
+              <td>$9500</td>
+              <td><input type="number" name="agregar_cantidad" value="1" min="0"></td>
+              <td><button class="btn">Agregar al Carrito</button></td>
+            </tr>
+          </tbody>
+        </thead>
+      </table>
+      <div>
+        <strong>Total</strong>
+        <span>$14500</span>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="container footer-container">
+    <h2 class="section-header">X-Land</h2>
+      <ul class="footer-links">
+        <li>
+          <a href="https://open.spotify.com/artist/2c8LSSe0oWnJxf54OQpT1S" target="_blank">
+            <img src="imgs/icons/spotify.png" alt="Spotify">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/XLANDBAND/" target="_blank">
+            <img src="imgs/icons/facebook.png" alt="Facebook">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/xlandband/" target="_blank">
+            <img src="imgs/icons/instagram.png" alt="Instagram">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=LP0UsELUu_g" target="_blank">
+            <img src="imgs/icons/youtube.png" alt="Youtube">
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>
