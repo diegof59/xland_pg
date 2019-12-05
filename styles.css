@@ -59,10 +59,11 @@ html, body {
 
 .main-container {
   min-height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .about {
-  margin: 2em;
   position: relative;
 }
 
@@ -156,4 +157,46 @@ tr:nth-child(even) {
 
 tr:last-child > td {
   border: none;
+}
+
+.shop-section {
+  margin: 20px 0;
+}
+
+.shop-header {
+  margin: 0;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-img {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
 }
