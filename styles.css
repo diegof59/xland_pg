@@ -8,7 +8,7 @@
   font-family: Raleway;
 }
 
-body {
+html, body {
   margin: 0;
 }
 
@@ -28,7 +28,7 @@ body {
   background-blend-mode: multiply;  
   background-size: cover;
   background-position: 50%;
-  height: 300px;
+  height: 250px;
   margin: auto;
 }
 
@@ -55,6 +55,10 @@ body {
 
 .menu a:hover {
   background-color: rgba(255,255,255,.3);
+}
+
+.main-container {
+  min-height: 400px;
 }
 
 .about {
@@ -113,4 +117,43 @@ li {
   vertical-align: middle;
   padding: .59em;
   cursor: pointer;
+}
+
+.btn-last-music {
+
+}
+
+.btn-last-music:hover {
+
+}
+
+.btn-main {
+  color: white;
+  background-color: #56CCF2;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btn-gig {
+  max-width: 42%;
+}
+
+table {
+  border-collapse:collapse;
+  width: 85%;
+}
+
+th, td {
+  border-bottom: 1px solid black;
+  padding: 1em 0;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:last-child > td {
+  border: none;
 }
