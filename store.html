@@ -26,7 +26,7 @@
       <h1 class="shop-header">Música</h1>
       <section class="shop-items">
         <div class="shop-item">
-          <h3 class="shop-item-title">Intimidad</h3>
+          <span class="shop-item-title">Intimidad</span>
           <img class="shop-item-img" src="imgs/music/intimidad.jpeg" alt="Intimidad portada">
           <div class="shop-item-details">
             <span class="shop-item-price">$9500</span>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="shop-item">
-          <h3 class="shop-item-title">Life Cycle</h3>
+          <span class="shop-item-title">Life Cycle</span>
           <img class="shop-item-img" src="imgs/music/life_cycle.jpeg" alt="Life Cycle portada">
           <div class="shop-item-details">
             <span class="shop-item-price">$9500</span>
@@ -47,8 +47,8 @@
       <h2 class="shop-header">Mercancia</h2>
       <section class="shop-items">
         <div class="shop-item">
-          <h3 class="shop-item-title">X-Land dije</h3>
-          <img class="shop-item-img" src="imgs/merch/xland_dije.png" alt="X-Land logo dije">
+          <span class="shop-item-title">X-Land dije</span>
+          <img class="shop-item-img" src="imgs/merch/xland_dije.png" alt="X-Land logo dije" />
           <div class="shop-item-details">
             <span class="shop-item-price">$5000</span>
             <button class="btn btn-main">Agregar al Carrito</button>
@@ -58,34 +58,45 @@
     </section>
     <section>
       <h3>Carrito de Compras</h3>
-      <table>
+      <table class="cart-table">
         <thead>
           <tr>
             <th>Ítem</th>
             <th>Precio</th>
             <th>Cantidad</th>
-            <th></th>
           </tr>
-          <tbody>
-            <tr>
-              <td>X-Land dije</td>
-              <td>$5000</td>
-              <td><input type="number" name="agregar_cantidad" value="1" min="0"></td>
-              <td><button class="btn">Agregar al Carrito</button></td>
-            </tr>
-            <tr>
-              <td>Intimidad</td>
-              <td>$9500</td>
-              <td><input type="number" name="agregar_cantidad" value="1" min="0"></td>
-              <td><button class="btn">Agregar al Carrito</button></td>
-            </tr>
-          </tbody>
         </thead>
+        <tbody>
+          <tr>
+            <td class="cart-item">
+              <img class="cart-item-img" src="imgs/merch/xland_dije.png"
+                    alt="X-Land logo dije" width="100" height="100" />
+              <span class="cart-item-title">X-Land dije</span>
+            </td>
+            <td>$5000</td>
+            <td><input type="number" class="cart-item-quant" name="agregar_cantidad" value="1" min="0"></td>
+            <td><button class="btn btn-danger">Remover</button></td>
+          </tr>
+          <tr>
+            <td class="cart-item">
+              <img class="cart-item-img" src="imgs/music/intimidad.jpeg"
+                    alt="Intimidad portada" width="100" height="100" />
+              <span class="cart-item-title">Intimidad</span>
+            </td>
+            <td>$9500</td>
+            <td><input type="number" class="cart-item-quant"  name="agregar_cantidad" value="1" min="0"></td>
+            <td><button class="btn btn-danger">Remover</button></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="cart-total cart-total">
+              <b>Total</b>
+              <span>$14500</span>
+            </td>
+          </tr>
+        </tfoot>
       </table>
-      <div>
-        <strong>Total</strong>
-        <span>$14500</span>
-      </div>
     </section>
   </div>
   <footer class="footer">
