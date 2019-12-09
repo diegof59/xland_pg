@@ -63,6 +63,10 @@ html, body {
   margin-bottom: 20px;
 }
 
+.section-header {
+  text-align: center;
+}
+
 .about {
   position: relative;
 }
@@ -121,7 +125,8 @@ li {
 }
 
 .btn-last-music {
-
+  display: block;
+  margin: 0 auto;
 }
 
 .btn-last-music:hover {
@@ -136,6 +141,10 @@ li {
   font-weight: bold;
 }
 
+.btn-main:hover {
+  background-color: #2D9CDB;
+}
+
 .btn-gig {
   max-width: 42%;
 }
@@ -143,12 +152,13 @@ li {
 .gigs-table {
   border-collapse:collapse;
   width: 85%;
+  margin: 0 auto;
 }
 
 .gigs-table th, .gigs-table td,
 .cart-table th, .cart-table td {
   border-bottom: 1px solid black;
-  padding: 1em 0;
+  padding: 0.5em 0;
   text-align: center;
 }
 
@@ -203,8 +213,18 @@ li {
     color: #333;
 }
 
+.cart-header {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #333;
+  display: block;
+  text-align: center;
+  margin: 2em 0 1em 0;
+}
+
 .cart-table {
-  width: 85%;
+  width: 75%;
+  margin: 0 auto;
   border-spacing: 1em 0;
 }
 
@@ -214,17 +234,14 @@ li {
   justify-content: space-around;
 }
 
-.cart-table tr:last-child > td {
+.cart-table tbody tr:last-child > td {
   border: none;
-}
-
-.cart-total {
-  text-align: right;
 }
 
 .cart-item-title {
   color:#333;
   font-size: 1.2em;
+  padding-left: 0.4em;
 }
 
 .cart-item-img {
@@ -255,4 +272,20 @@ li {
   padding: 0;
   text-align: center;
   font-size: 1.2em;
+}
+
+tfoot .cart-total {
+  text-align: right;
+  border-bottom: none;
+  border-top: 1px solid black;
+}
+
+.cart-total-price {
+  padding: 0 0.5em;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto;
+  font-size: 1.5em;
 }
