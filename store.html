@@ -6,6 +6,7 @@
   <meta author="diegof95"/>
   <title>X-Land | Store</title>
   <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <script type="text/javascript" src="store-cart.js" async="async"></script>
 </head>
 <body>
   <header id="header" class="header">
@@ -13,7 +14,7 @@
       <nav id="menu" class="menu">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#conciertos">Conciertos</a></li>
+          <li><a href="index.html#gigs">Conciertos</a></li>
           <li><a href="#">Tienda</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -67,23 +68,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="cart-item">
+          <tr class="cart-item">
+            <td class="cart-item-info">
               <img class="cart-item-img" src="imgs/merch/xland_dije.png"
                     alt="X-Land logo dije" width="100" height="100" />
               <span class="cart-item-title">X-Land dije</span>
             </td>
-            <td>$5000</td>
+            <td class="cart-item-price">$5000</td>
             <td><input type="number" class="cart-item-quant" name="agregar_cantidad" value="1" min="0"></td>
             <td><button class="btn btn-danger">Remover</button></td>
           </tr>
-          <tr>
-            <td class="cart-item">
+          <tr class="cart-item">
+            <td class="cart-item-info">
               <img class="cart-item-img" src="imgs/music/intimidad.jpeg"
                     alt="Intimidad portada" width="100" height="100" />
               <span class="cart-item-title">Intimidad</span>
             </td>
-            <td>$9500</td>
+            <td class="cart-item-price">$9500</td>
             <td><input type="number" class="cart-item-quant"  name="agregar_cantidad" value="1" min="0"></td>
             <td><button class="btn btn-danger">Remover</button></td>
           </tr>
@@ -92,7 +93,7 @@
           <tr>
             <td colspan="4" class="cart-total">
               <b>Total</b>
-              <span class="cart-total-price">$14500</span>
+              <span class="cart-total-price" id="cart-total-price">$14500</span>
             </td>
           </tr>
         </tfoot>

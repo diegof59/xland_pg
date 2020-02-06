@@ -228,7 +228,7 @@ li {
   border-spacing: 1em 0;
 }
 
-.cart-item {
+.cart-item-info {
   display: flex;
   align-items: center;
   justify-content: space-around;
