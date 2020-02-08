@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="styles.css"/>
   <script type="text/javascript" src="store-cart.js" async="async"></script>
 </head>
-<body>
+<body onload="init()">
   <header id="header" class="header">
     <div class="container header-container">
       <nav id="menu" class="menu">
@@ -31,7 +31,7 @@
           <img class="shop-item-img" src="imgs/music/intimidad.jpeg" alt="Intimidad portada">
           <div class="shop-item-details">
             <span class="shop-item-price">$9500</span>
-            <button class="btn btn-main">Agregar al Carrito</button>
+            <button class="btn btn-main btn-add">Agregar al Carrito</button>
           </div>
         </div>
         <div class="shop-item">
@@ -39,7 +39,7 @@
           <img class="shop-item-img" src="imgs/music/life_cycle.jpeg" alt="Life Cycle portada">
           <div class="shop-item-details">
             <span class="shop-item-price">$9500</span>
-            <button class="btn btn-main">Agregar al Carrito</button>
+            <button class="btn btn-main btn-add">Agregar al Carrito</button>
           </div>
         </div>
       </section>
@@ -52,7 +52,7 @@
           <img class="shop-item-img" src="imgs/merch/xland_dije.png" alt="X-Land logo dije" />
           <div class="shop-item-details">
             <span class="shop-item-price">$5000</span>
-            <button class="btn btn-main">Agregar al Carrito</button>
+            <button class="btn btn-main btn-add">Agregar al Carrito</button>
           </div>
         </div>
       </section>
@@ -85,7 +85,7 @@
               <span class="cart-item-title">Intimidad</span>
             </td>
             <td class="cart-item-price">$9500</td>
-            <td><input type="number" class="cart-item-quant"  name="agregar_cantidad" value="1" min="0"></td>
+            <td><input type="number" class="cart-item-quant" name="agregar_cantidad" value="1" min="0"></td>
             <td><button class="btn btn-danger">Remover</button></td>
           </tr>
         </tbody>
@@ -98,7 +98,7 @@
           </tr>
         </tfoot>
       </table>
-       <button class="btn btn-main btn-purchase" type="button">Comprar</button>
+       <button class="btn btn-main btn-purchase" id="buyBtn" type="button">Comprar</button>
     </section>
   </div>
   <footer class="footer">

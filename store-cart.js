@@ -1,17 +1,47 @@
+"use strict";
 
+function init() {
+  
+  let buyBtn = document.getElementById("buyBtn");
+  let addBtns = document.getElementsByClassName("btn-add");
+  let itemQuantInputs = document.getElementsByClassName("cart-item-quant");
+  let removeBtns = document.getElementsByClassName("btn-danger");
 
-removeBtns = document.getElementsByClassName("btn-danger");
+  buyBtn.addEventListener('click', buyCart);
 
-for(let n = 0; n < removeBtns.length; n++) {
-  let btn = removeBtns[n];
-  btn.addEventListener(
-    'click',
-    (event) => {
-      let clickedBtn = event.target;
-      clickedBtn.parentElement.parentElement.remove();
-      updateCartTotal();
-    }
-  );
+  for(let addBtn of addBtns){
+    addBtn.addEventListener(
+      'click',
+      addCartItem
+    );
+  }
+
+  for(let quantInput of itemQuantInputs){
+    quantInput.addEventListener(
+      'change',
+      updateCartTotal
+    );
+  }
+
+  for(let n = 0; n < removeBtns.length; n++) {
+    let btn = removeBtns[n];
+    btn.addEventListener(
+      'click',
+      (event) => {
+        let clickedBtn = event.target;
+        clickedBtn.parentElement.parentElement.remove();
+        updateCartTotal();
+      }
+    );
+  }
+}
+
+function buyCart(){
+  console.log("Comprar carro");
+}
+
+function addCartItem(){
+  console.log("Added to cart");
 }
 
 function updateCartTotal() {
@@ -20,7 +50,7 @@ function updateCartTotal() {
 
   let actualTotal = 0;
   for(let item of cartItems) {
-    let quant = item.getElementsByClassName("cart-item-quant")[0].getAttribute("value");
+    let quant = item.getElementsByClassName("cart-item-quant")[0].value;
     let price = parseInt(
         item.getElementsByClassName("cart-item-price")[0].innerText.replace("$","")
       );
