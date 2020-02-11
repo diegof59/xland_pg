@@ -33,7 +33,10 @@ function init() {
 }
 
 function buyCart(){
-  console.log("Comprar carro");
+  let buyedItems = document.querySelector(".cart-table tbody");
+  let emptyCartBody = document.createElement("tbody")
+  buyedItems.replaceWith(emptyCartBody);
+  updateCartTotal();
 }
 
 function addCartItem(event){
@@ -45,7 +48,7 @@ function addCartItem(event){
   for(let item of cartItems){
     let itemName = item.children[0].children[1].innerText;
     if(itemName == itemAddName) {
-      window.alert("The item is already on the cart")
+      alert("The item is already on the cart")
       duplicatedItem = true;
     }
   }
@@ -98,10 +101,7 @@ function updateCartTotal() {
     let price = parseInt(
         item.getElementsByClassName("cart-item-price")[0].innerText.replace("$","")
       );
-    console.log(quant);
-    console.log(price);
     actualTotal += price * quant;
   }
-
   cartTotal.innerText = "$" + actualTotal;
 }
